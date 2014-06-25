@@ -863,6 +863,7 @@ ul.list-links li a:hover {
   height: 100%;
   padding: 30px;
   margin-bottom: 30px;
+  border-radius: 2px;
 }
 .banner:hover {
   border-color: #d9d9d9;
@@ -1376,6 +1377,7 @@ ul.list-links li a:hover {
   margin-bottom: 30px;
   padding: 0 20px 15px 80px;
   position: relative;
+  border-radius: 2px;
 }
 .feature-box .description h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1391,6 +1393,7 @@ ul.list-links li a:hover {
   position: absolute;
   top: -2px;
   width: 60px;
+  border-radius: 2px 0px 0px 0px;
 }
 .feature-box .icon:after {
   bottom: -8px;
@@ -1940,6 +1943,7 @@ ul.list-links li a:hover {
   overflow: hidden;
   position: relative;
   width: 100%;
+  border-radius: 2px;
 }
 .property:hover img, .property:active img, .property:focus img {
   -moz-backface-visibility: hidden;
@@ -4157,8 +4161,9 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   color: #5a5a5a;
 }
 .horizontal-search-float .search-box .form-map {
-  background-color: rgba(255, 255, 255, 0.9);
+  /*background-color: rgba(255, 255, 255, 0.9);*/
   padding: 15px 15px 5px 15px;
+  border-radius: 5px;
 }
 .horizontal-search-float .search-box .form-map:hover {
   background-color: white;
