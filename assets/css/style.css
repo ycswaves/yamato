@@ -3111,6 +3111,7 @@ ul.list-links li a:hover {
   padding: 5px;
   cursor: pointer;
   color: #073855;
+  border-radius: 2px;
 }
 
 /****
@@ -3398,7 +3399,7 @@ ul.list-links li a:hover {
 }
 
 .search-box-wrapper {
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   top: 0px;
 }
@@ -3481,9 +3482,9 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -3523,6 +3524,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
 }
 .btn.btn-default:hover, select.btn-default:hover {
   background-color: #128dd4;
+  border-radius: 2px;
 }
 .btn.btn-default:active, select.btn-default:active {
   -moz-box-shadow: 0px 2px 2px transparent, inset 0px 2px 2px rgba(0, 0, 0, 0.2);
@@ -4001,6 +4003,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
 }
 .search-box .btn {
   width: 100%;
+  border-radius: 2px;
 }
 .search-box .nav-pills li a {
   -moz-border-radius: 0px;
@@ -4178,6 +4181,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   padding: inherit;
   padding-left: 10px;
   width: 100%;
+  border-radius: 2px;
 }
 .horizontal-search-float .search-box .form-map input[type="text"]:hover, .horizontal-search-float .search-box .form-map input[type="email"]:hover, .horizontal-search-float .search-box .form-map input[type="search"]:hover, .horizontal-search-float .search-box .form-map input[type="password"]:hover, .horizontal-search-float .search-box .form-map input[type="number"]:hover, .horizontal-search-float .search-box .form-map textarea:hover, .horizontal-search-float .search-box .form-map select:hover, .horizontal-search-float .search-box .form-map .selectpicker:hover, .horizontal-search-float .search-box .form-map .price-range:hover {
   background-color: #062f47;
@@ -4321,7 +4325,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   padding: 40px 0;
 }
 #page-footer .inner #footer-copyright {
-  background-color: #073855;
+  background-color: #1396e2;
   color: #fff;
   display: table;
   padding: 20px 0;
@@ -4400,7 +4404,7 @@ body, html {
   border: none;
   margin-bottom: 0;
   min-height: inherit;
-  padding: 30px 0;
+  padding: 10px 0;
   /**/
   display: table;
   width: 100%;
@@ -4674,6 +4678,7 @@ body, html {
 }
 .navigation .add-your-property .btn {
   width: 38px;
+  border-radius: 0px 0px 2px 2px;
 }
 .navigation .add-your-property .text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -4686,6 +4691,7 @@ body, html {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   color: #5a5a5a;
+  border-radius: 2px;
   background-color: #fff;
   padding: 10px;
   position: absolute;
