@@ -3671,6 +3671,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   position: relative;
   width: 20px;
   top: -1px;
+  border-radius:2px;
 }
 .checkbox .icheckbox:after {
   -moz-transition: 0.3s;
