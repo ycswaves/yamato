@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-US">
+<html ng-app="yamato">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +8,91 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
+
+    <link rel="stylesheet" href="assets/angularMotion/angular-motion.min.css">
+    <link rel="stylesheet" href="//rawgithub.com/mgcrea/bootstrap-additions/master/dist/bootstrap-additions.min.css">
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="http://oss.maxcdn.com/angular.strap/2.0.0/angular-strap.min.js"></script>
+    <script src="http://oss.maxcdn.com/angular.strap/2.0.0/angular-strap.tpl.min.js"></script>
+
     <title>Zoner | Properties Listing Grid</title>
-    <style type="text/css">
-    #property-list{
-      box-shadow: inset -2px 0px 10px 0px rgba(0,0,0,0.35);
-      -webkit-box-shadow: inset -2px 0px 10px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: inset -2px 0px 10px 0px rgba(0,0,0,0.75);
-    }
-    </style>
+
+    <script type="text/javascript">
+      jQuery(function() {
+        jQuery('#map-wrapper').on('shown.bs.modal', function () {
+            _latitude = 48.87; // These two lines represent the center of your map
+            _longitude = 2.29; // These two lines represent the center of your map
+            var map = createHomepageGoogleMap(_latitude,_longitude);
+            console.log(map);
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      var app = angular.module('yamato', ['ngRoute', 'ngAnimate', 'ngSanitize', 'mgcrea.ngStrap']);
+
+      app.controller('MainCtrl', function($scope) {
+      });
+
+      'use strict';
+
+      angular.module('yamato')
+      .config(function($asideProvider) {
+        angular.extend($asideProvider.defaults, {
+          container: 'body',
+          html: true
+        });
+      })
+
+
+      .controller('AsideCtrl', function($scope) {
+
+      });
+
+      function toggleMap(){
+        $('#map-wrap').toggleClass('shrink');
+      }
+    </script>
 
 </head>
 
-<body class="page-sub-page page-listing page-grid page-search-results" id="page-top">
+<body class="page-sub-page page-listing page-grid page-search-results" id="page-top" ng-controller="MainCtrl">
 <!-- Wrapper -->
 <div class="wrapper">
 
     <!-- Page Content -->
     <div id="page-content">
 
-        <div class="container" style="width: 100%">
+
+      <!-- <div id="map-wrap">
+        <div id="map"></div>
+      </div> -->
+      <button style="position:fixed; top:5px; left:5px; z-index:10" class="btn btn-info" data-toggle="modal" data-target="#map-wrapper"><i class="fa fa-location-arrow"></i></button>
+
+
+
+        <div class="container" style="width: 100%; padding:30px">
             <div class="row">
                 <!-- Results -->
-                <div id="property-list" class="col-md-7 col-sm-12" style="padding: 10px;">
+                <div id="property-list" class="col-md-12 col-sm-12" ng-controller="AsideCtrl">
                     <section id="results">
                         <header><h1>Properties Listing</h1></header>
                         <section id="search-filter">
+
+
+
                             <figure><h3><i class="fa fa-search"></i>Search Results:</h3>
                                 <span class="search-count">28</span>
                                 <div class="sorting">
@@ -56,7 +109,7 @@
                         </section>
                         <section id="properties">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property equal-height">
                                     <figure class="tag status">For Sale</figure>
                                     <figure class="type" title="Apartment"><img src="assets/img/property-types/apartment.png"></figure>
@@ -92,7 +145,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property equal-height">
                                     <figure class="tag status">For Rent</figure>
                                     <a href="property-detail.html">
@@ -127,7 +180,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property equal-height">
                                     <a href="property-detail.html">
                                         <div class="property-image">
@@ -161,7 +214,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Sale</figure>
                                     <a href="property-detail.html">
@@ -196,7 +249,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="type" title="Single Family"><img src="assets/img/property-types/single-family.png"></figure>
                                     <a href="property-detail.html">
@@ -231,7 +284,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Rent</figure>
                                     <figure class="type" title="Apartment"><img src="assets/img/property-types/apartment.png"></figure>
@@ -267,7 +320,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Sale</figure>
                                     <a href="property-detail.html">
@@ -302,7 +355,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="type" title="Land"><img src="assets/img/property-types/land.png"></figure>
                                     <a href="property-detail.html">
@@ -337,7 +390,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <a href="property-detail.html">
                                         <div class="property-image">
@@ -372,7 +425,7 @@
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
 
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Sale</figure>
                                     <a href="property-detail.html">
@@ -407,7 +460,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Rent</figure>
                                     <a href="property-detail.html">
@@ -442,7 +495,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <a href="property-detail.html">
                                         <div class="property-image">
@@ -477,7 +530,7 @@
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
 
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <figure class="tag status">For Sale</figure>
                                     <a href="property-detail.html">
@@ -512,7 +565,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <a href="property-detail.html">
                                         <div class="property-image">
@@ -546,7 +599,7 @@
                                     </a>
                                 </div><!-- /.property -->
                             </div><!-- /.col-md-3 -->
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="property">
                                     <a href="property-detail.html">
                                         <div class="property-image">
@@ -599,13 +652,7 @@
                 <!-- end Results -->
 
                 <!-- sidebar -->
-                <div class="col-md-5 col-sm-12" style="padding: 0px; height: 100%; position: fixed; right:0px">
-                    <section id="sidebar">
-                      <!-- Map -->
-                      <div id="map"></div>
-                      <!-- end Map -->
-                    </section><!-- /#sidebar -->
-                </div><!-- /.col-md-3 -->
+
                 <!-- end Sidebar -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -613,9 +660,16 @@
     <!-- end Page Content -->
     <!-- Page Footer -->
     <!-- end Page Footer -->
+
+    <div id="map-wrapper" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
 </div>
 
-<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
@@ -629,7 +683,7 @@
 <script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
 <script type="text/javascript" src="assets/js/jquery.slider.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
-
+<!-- for map to use, need to load following js -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="assets/js/custom-map.js"></script>
 <script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
@@ -638,9 +692,7 @@
 
 
 <script>
-    _latitude = 48.87; // These two lines represent the center of your map
-    _longitude = 2.29; // These two lines represent the center of your map
-    createHomepageGoogleMap(_latitude,_longitude);
+
 </script>
 <!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
