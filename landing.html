@@ -64,6 +64,124 @@
 	padding: 50px 0px 25px 0px;
 }
 
+.btn-twitter {
+  color: #fff !important;
+  background-color: #00c7f7;
+  border-color: #00c7f7;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #fff !important;
+  background-color: #00a6ce;
+  border-color: #0096ba;
+}
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+.btn-twitter.disabled,
+.btn-twitter.disabled:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter.disabled:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled],
+.btn-twitter[disabled]:hover,
+.btn-twitter[disabled]:focus,
+.btn-twitter[disabled]:active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter,
+fieldset[disabled] .btn-twitter:hover,
+fieldset[disabled] .btn-twitter:focus,
+fieldset[disabled] .btn-twitter:active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #00c7f7;
+  border-color: #00c7f7;
+}
+
+.btn-facebook {
+  color: #fff !important;
+  background-color: #335397;
+  border-color: #335397;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #fff !important;
+  background-color: #294279;
+  border-color: #243a69;
+}
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+.btn-facebook.disabled,
+.btn-facebook.disabled:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook.disabled:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled],
+.btn-facebook[disabled]:hover,
+.btn-facebook[disabled]:focus,
+.btn-facebook[disabled]:active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook,
+fieldset[disabled] .btn-facebook:hover,
+fieldset[disabled] .btn-facebook:focus,
+fieldset[disabled] .btn-facebook:active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #335397;
+  border-color: #335397;
+}
+.btn-gplus {
+  color: #fff !important;
+  background-color: #dd4a38;
+  border-color: #dd4a38;
+}
+.btn-gplus:hover,
+.btn-gplus:focus,
+.btn-gplus:active,
+.btn-gplus.active,
+.open .dropdown-toggle.btn-gplus {
+  color: #fff !important;
+  background-color: #ca3522;
+  border-color: #b8301f;
+}
+.btn-gplus:active,
+.btn-gplus.active,
+.open .dropdown-toggle.btn-gplus {
+  background-image: none;
+}
+.btn-gplus.disabled,
+.btn-gplus.disabled:hover,
+.btn-gplus.disabled:focus,
+.btn-gplus.disabled:active,
+.btn-gplus.disabled.active,
+.btn-gplus[disabled],
+.btn-gplus[disabled]:hover,
+.btn-gplus[disabled]:focus,
+.btn-gplus[disabled]:active,
+.btn-gplus[disabled].active,
+fieldset[disabled] .btn-gplus,
+fieldset[disabled] .btn-gplus:hover,
+fieldset[disabled] .btn-gplus:focus,
+fieldset[disabled] .btn-gplus:active,
+fieldset[disabled] .btn-gplus.active {
+  background-color: #dd4a38;
+  border-color: #dd4a38;
+}
+
+.btn > i.pull-left,
+.btn > i.pull-right {
+  line-height: 1.428571429;
+}
+
 </style>
 <body class="page-homepage navigation-fixed-top page-slider horizontal-search-float" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
 <!-- Wrapper -->
@@ -85,7 +203,7 @@
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
-                        <li><a href="contact.html">Sign in</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-wrapper">Sign in</a></li>
                     </ul>
                 </nav><!-- /.navbar collapse-->
                 <div class="add-your-property">
@@ -360,6 +478,116 @@
         </div><!-- /.inner -->
     </footer>
     <!-- end Page Footer -->
+    <div id="login-wrapper" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-6 b-r">
+                  <h1 class="m-t-none m-b">Sign in</h1>
+                  <p>Sign in to meet your friends.</p>
+                  <form role="form">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="checkbox m-t-lg">
+                      <button type="submit" class="btn btn-sm btn-default pull-right text-uc m-t-n-xs"><strong>Log in</strong></button>
+                      <label>
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>                
+                  </form>
+                </div>
+                <div class="col-sm-6">
+                  <h1>Not a member?</h1>
+                  <p>You can create an account <a href="#" data-toggle="modal" data-target="#signup-wrapper" class="text-info" >here</a></p>
+                  <p>OR</p>
+                  <a href="#" class="btn btn-facebook btn-block m-b-sm"><i class="fa fa-facebook pull-left"></i>Sign in with Facebook</a>
+                  <a href="#" class="btn btn-twitter btn-block m-b-sm"><i class="fa fa-twitter pull-left"></i>Sign in with Twitter</a>
+                  <a href="#" class="btn btn-gplus btn-block"><i class="fa fa-google-plus pull-left"></i>Sign in with Google+</a>
+                </div>
+              </div>          
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="signup-wrapper" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="row">
+                
+            
+            
+                <div class="col-md-12">
+                	<h1>Create an Account</h1>
+                    <h3>Account Type</h3>
+                    <form role="form" id="form-create-account" method="post" action="">
+                        <div class="radio" id="create-account-user">
+                            <label>
+                                <input type="radio" id="account-type-user" name="account-type" required checked>Regular User
+                            </label>
+                        </div>
+                        <div class="radio" id="agent-switch" data-agent-state="">
+                            <label>
+                                <input type="radio" id="account-type-agent" name="account-type" required>Agent
+                            </label>
+                        </div>
+                        <div id="agency" class="disabled">
+                            <div class="form-group">
+                                <label for="account-agency">Select your agency:</label>
+                                <select name="account-agency" id="account-agency">
+                                    <option value="">Agency</option>
+                                    <option value="1">Estate+</option>
+                                    <option value="2">Northfolk Eastate</option>
+                                    <option value="3">Maximum Properties</option>
+                                    <option value="4">Edd's Homes</option>
+                                    <option value="5">Will & Scotch</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="form-create-account-full-name">Full Name:</label>
+                            <input type="text" class="form-control" id="form-create-account-full-name" required>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="form-create-account-email">Email:</label>
+                            <input type="email" class="form-control" id="form-create-account-email" required>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="form-create-account-password">Password:</label>
+                            <input type="password" class="form-control" id="form-create-account-password" required>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="form-create-account-confirm-password">Confirm Password:</label>
+                            <input type="password" class="form-control" id="form-create-account-confirm-password" required>
+                        </div><!-- /.form-group -->
+                        <div class="checkbox pull-left">
+                            <label>
+                                <input type="checkbox" id="account-type-newsletter" name="account-newsletter">Receive Newsletter
+                            </label>
+                        </div>
+                        <div class="form-group clearfix">
+                            <button type="submit" class="btn pull-right btn-default" id="account-submit">Create an Account</button>
+                        </div><!-- /.form-group -->
+                    </form>
+                    <hr>
+                    <div class="center">
+                        <figure class="note">By clicking the “Create an Account” button you agree with our <a href="terms-conditions.html">Terms and conditions</a></figure>
+                    </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+              </div>          
+            </div>
+        </div>
+      </div>
+    </div>
 </div>
 
 <div id="overlay"></div>
