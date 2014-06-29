@@ -4807,7 +4807,7 @@ body, html {
 
 @media (min-width: 1200px) {
   .page-homepage .row:last-child .property {
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
   }
   .page-homepage .row:last-child .feature-box {
     margin-bottom: 0;
