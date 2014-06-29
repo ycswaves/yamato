@@ -473,7 +473,7 @@ function centerSearchBox() {
     var $navigation = $('.navigation');
     var positionFromBottom = 20;
     if ($('body').hasClass('navigation-fixed-top')){
-        $('#map, #slider').css('margin-top',$navigation.height());
+        // $('#map, #slider').css('margin-top',$navigation.height());
         $searchBox.css('z-index',98);
     } else {
         $('.leaflet-map-pane').css('top',-50);
