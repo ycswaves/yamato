@@ -108,20 +108,20 @@ $(document).ready(function($) {
 
 //  Smooth Navigation Scrolling
 
-    $('.navigation .nav a[href^="#"], a[href^="#"].roll').on('click',function (e) {
-        e.preventDefault();
-        var target = this.hash,
-            $target = $(target);
-        if ($(window).width() > 768) {
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - $('.navigation').height()
-            }, 2000)
-        } else {
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 2000)
-        }
-    });
+    // $('.navigation .nav a[href^="#"], a[href^="#"].roll').on('click',function (e) {
+    //     e.preventDefault();
+    //     var target = this.hash,
+    //         $target = $(target);
+    //     if ($(window).width() > 768) {
+    //         $('html, body').stop().animate({
+    //             'scrollTop': $target.offset().top - $('.navigation').height()
+    //         }, 2000)
+    //     } else {
+    //         $('html, body').stop().animate({
+    //             'scrollTop': $target.offset().top
+    //         }, 2000)
+    //     }
+    // });
 
 //  Rating
 

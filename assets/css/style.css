@@ -28,21 +28,23 @@ blockquote {
   border: none;
   display: table;
   margin-bottom: 0;
-  padding: 20px 10%;
+  /*padding: 20px 10%;*/
   width: 100%;
 }
 blockquote figure {
-  display: table-cell;
+  /*display: table-cell;*/
   vertical-align: middle;
 }
 blockquote figure .image {
   background-color: #5a5a5a;
-  height: 180px;
+  height: 160px;
   position: relative;
   overflow: hidden;
   width: 160px;
+  border-radius:80px;
+  margin:0 auto;
 }
-blockquote figure .image:after {
+/*blockquote figure .image:after {
   bottom: 0px;
   content: "";
   height: 0px;
@@ -61,7 +63,7 @@ blockquote figure .image:before {
   left: 0;
   width: calc(100% - 20px);
   position: absolute;
-}
+}*/
 blockquote .cite {
   display: table-cell;
   vertical-align: middle;
@@ -4045,11 +4047,11 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 5px 10px 1px 10px;
 }
 .search-box .form-map:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .search-box .form-map input[type="text"], .search-box .form-map input[type="email"], .search-box .form-map input[type="search"], .search-box .form-map input[type="password"], .search-box .form-map input[type="number"], .search-box .form-map textarea, .search-box .form-map select, .search-box .form-map .selectpicker, .search-box .form-map .price-range {
   background-color: #073855;
@@ -4173,7 +4175,8 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
 
 .horizontal-search-float .search-box {
   padding-right: 0;
-  position: inherit;
+  /*position: inherit;*/
+  position: relative;
 }
 .horizontal-search-float .search-box .nav-pills li.active a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -4197,7 +4200,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   border-radius: 5px;
 }
 .horizontal-search-float .search-box .form-map:hover {
-  background-color: white;
+  /*background-color: white;*/
 }
 .horizontal-search-float .search-box .form-map input[type="text"], .horizontal-search-float .search-box .form-map input[type="email"], .horizontal-search-float .search-box .form-map input[type="search"], .horizontal-search-float .search-box .form-map input[type="password"], .horizontal-search-float .search-box .form-map input[type="number"], .horizontal-search-float .search-box .form-map textarea, .horizontal-search-float .search-box .form-map select, .horizontal-search-float .search-box .form-map .selectpicker, .horizontal-search-float .search-box .form-map .price-range {
   background-color: #073855;
@@ -5026,18 +5029,18 @@ body, html {
   }
 
   blockquote {
-    display: block !important;
-    padding: 20px 0 !important;
+   /* display: block !important;
+    padding: 20px 0 !*/important;
     text-align: center;
   }
   blockquote figure {
-    display: inline-block !important;
+    /*display: inline-block !important;*/
     margin-bottom: 30px;
   }
-  blockquote .cite {
+/*  blockquote .cite {
     display: block !important;
     padding-left: 0;
-  }
+  }*/
 
   .blog-post {
     margin-bottom: 30px;
