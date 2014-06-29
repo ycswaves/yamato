@@ -1,0 +1,10 @@
+{
+  "name": "yamato",
+  "description": "yamato",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.4.5",
+    "express3-handlebars": "^0.5.0"
+  }
+}
