@@ -1,20 +1,12 @@
-{{#section 'body-class'}}
-    page-sub-page page-listing-lines page-search-results
-{{/section}}
-
-{{#section 'title'}}
-    Property List
-{{/section}}
-
 <script type="text/javascript">
-      $(function() {
-        $('#map-wrapper').on('shown.bs.modal', function () {
-            _latitude = 48.87; // These two lines represent the center of your map
-            _longitude = 2.29; // These two lines represent the center of your map
-            createHomepageGoogleMap(_latitude,_longitude);
-        });
-      });
-    </script>
+  $(function() {
+    $('#map-wrapper').on('shown.bs.modal', function () {
+        _latitude = 48.87; // These two lines represent the center of your map
+        _longitude = 2.29; // These two lines represent the center of your map
+        createHomepageGoogleMap(_latitude,_longitude);
+    });
+  });
+</script>
 
 <!-- Breadcrumb -->
 <div class="container">
