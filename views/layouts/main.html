@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
     <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <title>Home Beacon | {{{_sections.title}}} </title>
+    <title>Home Beacon | {{{section.title}}} </title>
 
 </head>
 
-<body class="page-homepage navigation-fixed-top page-slider horizontal-search-float" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
+<body class="{{{section.body-class}}}" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
 <!-- Wrapper -->
 <div class="wrapper">
-    <section>
+    <section class="welcome">
       <header class="navigation">
         <div class="container">
             <header class="navbar" id="top" role="banner">
@@ -48,6 +48,7 @@
             </header><!-- /.navbar -->
         </div><!-- /.container -->
       </header>
+      {{{section.searchbox}}}
     </section>
     <!-- Page Content -->
     <div id="page-content">

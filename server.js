@@ -8,8 +8,8 @@ app.engine('html', expressHbs({
   defaultLayout:'main.html',
   helpers: {
     section: function(name, options){
-        if(!this._sections) this._sections = {};
-        this._sections[name] = options.fn(this);
+        if(!this.section) this.section = {};
+        this.section[name] = options.fn(this);
         return null;
     }
   }
@@ -19,7 +19,11 @@ app.set('view engine', 'html');
 app.use("/assets", express.static(__dirname + '/assets'));
 
 app.get('/', function(req, res){
-  res.render('partials/property-list');
+  res.render('landing/index');
+});
+
+app.get('/property', function(req, res){
+  res.render('property/list');
 });
 
 console.log('app started');

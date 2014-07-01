@@ -1,0 +1,510 @@
+<style type="text/css">
+.welcome{
+    background: url('http://demo.hiarn.com/closed-city/static-countdown/img/bg@1920.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    min-height: 830px;
+    width: 100%;
+    color: #fff;
+}
+
+.slogan{
+    text-align: left;
+    width:80%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top:350px;
+}
+
+.slogan h1{
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 5px 0;
+    position: relative;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    left: 0px;
+    border-bottom: none;
+}
+
+.slogan h2{
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+#advertising{
+    /*background-color: #ebeef5;*/
+    padding: 50px 0px 25px 0px;
+}
+
+.btn-twitter {
+  color: #fff !important;
+  background-color: #00c7f7;
+  border-color: #00c7f7;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #fff !important;
+  background-color: #00a6ce;
+  border-color: #0096ba;
+}
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+.btn-twitter.disabled,
+.btn-twitter.disabled:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter.disabled:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled],
+.btn-twitter[disabled]:hover,
+.btn-twitter[disabled]:focus,
+.btn-twitter[disabled]:active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter,
+fieldset[disabled] .btn-twitter:hover,
+fieldset[disabled] .btn-twitter:focus,
+fieldset[disabled] .btn-twitter:active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #00c7f7;
+  border-color: #00c7f7;
+}
+
+.btn-facebook {
+  color: #fff !important;
+  background-color: #335397;
+  border-color: #335397;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #fff !important;
+  background-color: #294279;
+  border-color: #243a69;
+}
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+.btn-facebook.disabled,
+.btn-facebook.disabled:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook.disabled:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled],
+.btn-facebook[disabled]:hover,
+.btn-facebook[disabled]:focus,
+.btn-facebook[disabled]:active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook,
+fieldset[disabled] .btn-facebook:hover,
+fieldset[disabled] .btn-facebook:focus,
+fieldset[disabled] .btn-facebook:active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #335397;
+  border-color: #335397;
+}
+.btn-gplus {
+  color: #fff !important;
+  background-color: #dd4a38;
+  border-color: #dd4a38;
+}
+.btn-gplus:hover,
+.btn-gplus:focus,
+.btn-gplus:active,
+.btn-gplus.active,
+.open .dropdown-toggle.btn-gplus {
+  color: #fff !important;
+  background-color: #ca3522;
+  border-color: #b8301f;
+}
+.btn-gplus:active,
+.btn-gplus.active,
+.open .dropdown-toggle.btn-gplus {
+  background-image: none;
+}
+.btn-gplus.disabled,
+.btn-gplus.disabled:hover,
+.btn-gplus.disabled:focus,
+.btn-gplus.disabled:active,
+.btn-gplus.disabled.active,
+.btn-gplus[disabled],
+.btn-gplus[disabled]:hover,
+.btn-gplus[disabled]:focus,
+.btn-gplus[disabled]:active,
+.btn-gplus[disabled].active,
+fieldset[disabled] .btn-gplus,
+fieldset[disabled] .btn-gplus:hover,
+fieldset[disabled] .btn-gplus:focus,
+fieldset[disabled] .btn-gplus:active,
+fieldset[disabled] .btn-gplus.active {
+  background-color: #dd4a38;
+  border-color: #dd4a38;
+}
+
+.btn > i.pull-left,
+.btn > i.pull-right {
+  line-height: 1.428571429;
+}
+
+.horizontal-search-float .search-box hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.horizontal-search-float .search-box-wrapper .search-box .advanced-search-toggle {
+    padding: 10px 0px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.horizontal-search-float .search-box-wrapper .search-box .advanced-search h3 {
+margin-top: 0;
+}
+
+.horizontal-search-float .search-box-wrapper .search-box .nav-pills li.active a {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    background-color: #1396e2;
+    color: #fff;
+}
+
+.horizontal-search-float .search-box-wrapper .search-box .nav-pills li a {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    color: white;
+}
+
+</style>
+
+{{#section 'title'}}
+    Landing
+{{/section}}
+
+{{#section 'body-class'}}
+    page-homepage navigation-fixed-top page-slider horizontal-search-float
+{{/section}}
+
+{{#section 'searchbox'}}
+<div class="slogan">
+  <h1>Find a place to stay.</h1>
+  <h2>Rent from people in over 34,000 cities and 190 countries.</h2>
+</div>
+
+<div class="search-box-wrapper">
+    <div class="search-box-inner">
+        <div class="container">
+            <div class="search-box map">
+                    <ul class="nav nav-pills">
+                <li class="active"><a href="#search-form-sale" data-toggle="tab">Sale</a></li>
+                <li><a href="#search-form-rent" data-toggle="tab">Rent</a></li>
+                </ul>
+                <hr>
+                <div class="tab-content">
+                <div class="tab-pane fade in active" id="search-form-sale">
+                <form role="form" id="form-map-sale" class="form-map form-search clearfix">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-country">
+                                    <option value="">Country</option>
+                                    <option value="1">France</option>
+                                    <option value="2">Great Britain</option>
+                                    <option value="3">Spain</option>
+                                    <option value="4">Russia</option>
+                                    <option value="5">United States</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-city">
+                                    <option value="">City</option>
+                                    <option value="1">New York</option>
+                                    <option value="2">Los Angeles</option>
+                                    <option value="3">Chicago</option>
+                                    <option value="4">Houston</option>
+                                    <option value="5">Philadelphia</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-district">
+                                    <option value="">District</option>
+                                    <option value="1">Manhattan</option>
+                                    <option value="2">The Bronx</option>
+                                    <option value="3">Brooklyn</option>
+                                    <option value="4">Queens</option>
+                                    <option value="5">Staten Island</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-property-type">
+                                    <option value="">Property Type</option>
+                                    <option value="1">Apartment</option>
+                                    <option value="2">Condominium</option>
+                                    <option value="3">Cottage</option>
+                                    <option value="4">Flat</option>
+                                    <option value="5">House</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-price">
+                                    <option value="">Price</option>
+                                    <option value="1">$10,000 +</option>
+                                    <option value="2">$50,000 +</option>
+                                    <option value="3">$100,000 +</option>
+                                    <option value="4">$500,000 +</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Search Sale</button>
+                            </div><!-- /.form-group -->
+                        </div>
+                    </div>
+                </form><!-- /#form-map -->
+                </div>
+                <div class="tab-pane fade" id="search-form-rent">
+                <a class="advanced-search-toggle" data-toggle="collapse" data-parent="#accordion" href="#advanced-search-rent">Advanced Sale Search <i class="fa fa-plus"></i></a>
+                                        <form role="form" id="form-map-sale" class="form-map form-search clearfix">
+                                        <div id="advanced-search-rent" class="panel-collapse collapse">
+                            <div class="advanced-search">
+                                <header><h3>Property Features</h3></header>
+                                <ul class="submit-features">
+                                    <li><div class="checkbox"><label><input type="checkbox">Air conditioning</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Bedding</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Heating</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Internet</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Microwave</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Smoking allowed</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Use of pool</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Toaster</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Coffee pot</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Cable TV</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Parquet</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Roof terrace</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Terrace</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Balcony</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Iron</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Hi-Fi</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Beach</label></div></li>
+                                    <li><div class="checkbox"><label><input type="checkbox">Garage</label></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="row">
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-rent-city">
+                                        <option value="">City</option>
+                                        <option value="1">New York</option>
+                                        <option value="2">Los Angeles</option>
+                                        <option value="3">Chicago</option>
+                                        <option value="4">Houston</option>
+                                        <option value="5">Philadelphia</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-rent-district">
+                                        <option value="">District</option>
+                                        <option value="1">Manhattan</option>
+                                        <option value="2">The Bronx</option>
+                                        <option value="3">Brooklyn</option>
+                                        <option value="4">Queens</option>
+                                        <option value="5">Staten Island</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-rent-property-type">
+                                        <option value="">Property Type</option>
+                                        <option value="1">Apartment</option>
+                                        <option value="2">Condominium</option>
+                                        <option value="3">Cottage</option>
+                                        <option value="4">Flat</option>
+                                        <option value="5">House</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-rent-payment">
+                                        <option value="">Payment</option>
+                                        <option value="1">Monthly</option>
+                                        <option value="2">Quarterly</option>
+                                        <option value="3">Yearly</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-rent-price">
+                                        <option value="">Price</option>
+                                        <option value="1">$100 +</option>
+                                        <option value="2">$500 +</option>
+                                        <option value="2">$1000 +</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default">Search Rent</button>
+                                </div><!-- /.form-group -->
+                            </div>
+                        </div>
+                </form><!-- /#form-map -->
+                </div>
+                </div>
+            </div><!-- /.search-box -->
+        </div><!-- /.container -->
+    </div><!-- /.search-box-inner -->
+</div>
+<!-- end Search Box -->
+{{/section}}
+
+<section id="banner">
+    <div class="block has-dark-background background-color-default center text-banner">
+        <div class="container">
+            <h1 class="no-bottom-margin no-border">Welcome to Home Beacon!</h1>
+            <h3>Finding properties never been this easier before</h3>
+        </div>
+    </div>
+</section><!-- /#banner -->
+<section id="our-services" class="block">
+    <div class="container">
+        <header class="section-title"><h2>Our Services</h2></header>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="feature-box equal-height">
+                    <figure class="icon"><i class="fa fa-building-o"></i></figure>
+                    <aside class="description">
+                        <header><h3>Wide Range of Properties</h3></header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </aside>
+                </div><!-- /.feature-box -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4 col-sm-4">
+                <div class="feature-box equal-height">
+                    <figure class="icon"><i class="fa fa-search"></i></figure>
+                    <aside class="description">
+                        <header><h3>Comprehensive Searching</h3></header>
+                        <p>Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi </p>
+                    </aside>
+                </div><!-- /.feature-box -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4 col-sm-4">
+                <div class="feature-box equal-height">
+                    <figure class="icon"><i class="fa fa-bullhorn"></i></figure>
+                    <aside class="description">
+                        <header><h3>Push Notification!</h3></header>
+                        <p>Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat</p>
+                    </aside>
+                </div><!-- /.feature-box -->
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /#our-services -->
+<section id="advertising" class="block has-dark-background background-color-grey-light">
+    <div class="container">
+        <a href="submit.html">
+            <div class="banner">
+                <div class="wrapper">
+                    <span class="title">List your property for free now?</span>
+                    <span class="submit">Submit it now! <i class="fa fa-check"></i></span>
+                </div>
+            </div><!-- /.banner-->
+        </a>
+    </div>
+</section><!-- /#adveritsing-->
+<section id="testimonials" class="block">
+    <div class="container">
+        <header class="section-title"><h2>Testimonials</h2></header>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <blockquote class="testimonial">
+                    <figure>
+                        <div class="image">
+                            <img alt="" src="assets/img/client-01.jpg" width="160">
+                        </div>
+                    </figure>
+                </blockquote>
+                <blockquote>
+                <aside class="cite">
+                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <footer>Natalie Jenkins</footer>
+                </aside>
+                </blockquote>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <blockquote class="testimonial">
+                    <figure>
+                        <div class="image">
+                            <img alt="" src="assets/img/client-01.jpg" width="160">
+                        </div>
+                    </figure>
+                </blockquote>
+                <blockquote>
+                <aside class="cite">
+                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <footer>Natalie Jenkins</footer>
+                </aside>
+                </blockquote>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <blockquote class="testimonial">
+                    <figure>
+                        <div class="image">
+                            <img alt="" src="assets/img/client-01.jpg" width="160">
+                        </div>
+                    </figure>
+                </blockquote>
+                <blockquote>
+                <aside class="cite">
+                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <footer>Natalie Jenkins</footer>
+                </aside>
+                </blockquote>
+            </div>
+        </div><!-- /.testimonials-carousel -->
+    </div><!-- /.container -->
+</section><!-- /#testimonials -->
+<section id="partners" class="block">
+    <div class="container">
+        <header class="section-title"><h2>Our Partners</h2></header>
+        <div class="logos">
+            <div class="logo"><a href=""><img src="assets/img/logo-partner-01.png" alt=""></a></div>
+            <div class="logo"><a href=""><img src="assets/img/logo-partner-02.png" alt=""></a></div>
+            <div class="logo"><a href=""><img src="assets/img/logo-partner-03.png" alt=""></a></div>
+            <div class="logo"><a href=""><img src="assets/img/logo-partner-04.png" alt=""></a></div>
+            <div class="logo"><a href=""><img src="assets/img/logo-partner-05.png" alt=""></a></div>
+        </div>
+    </div><!-- /.container -->
+</section><!-- /#partners -->
