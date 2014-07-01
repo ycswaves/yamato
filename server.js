@@ -3,7 +3,17 @@ var app = express();
 
 var expressHbs = require('express3-handlebars');
 
-app.engine('html', expressHbs({extname:'html', defaultLayout:'main.html'}));
+app.engine('html', expressHbs({
+  extname:'html',
+  defaultLayout:'main.html',
+  helpers: {
+    section: function(name, options){
+        if(!this._sections) this._sections = {};
+        this._sections[name] = options.fn(this);
+        return null;
+    }
+  }
+}));
 app.set('view engine', 'html');
 
 app.use("/assets", express.static(__dirname + '/assets'));
