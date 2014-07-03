@@ -22,7 +22,7 @@ app.engine('html', expressHbs({
 app.set('view engine', 'html');
 
 // database connection
-var expressmongoose = require('express-mongoose');
+// var expressmongoose = require('express-mongoose');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 
