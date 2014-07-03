@@ -40,3 +40,8 @@ Thumbs.db
 ######################
 oauth.js
 startup.js
+
+# testing files    #
+######################
+/test
+*_test.*
