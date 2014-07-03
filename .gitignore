@@ -43,5 +43,5 @@ startup.js
 
 # testing files    #
 ######################
-/test
-*_test.*
+/_*
+_*.*
