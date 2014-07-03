@@ -22,8 +22,9 @@ app.engine('html', expressHbs({
 app.set('view engine', 'html');
 
 // database connection
-// var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/mydb');
+// var expressmongoose = require('express-mongoose');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
 
 // some environment variables
 app.set('port', process.env.PORT || 3000);
