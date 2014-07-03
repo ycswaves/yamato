@@ -34,6 +34,8 @@ module.exports = function(app) {
  * list all
  */
   app.get('/users', function(req, res) {
-    res.send(User.find()); 
+    User.find(function(err, doc) { 
+        res.json(doc); 
+    });
   });
 } 
