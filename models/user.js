@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
   , Schema = mongoose.Schema
-    userSchema = new mongoose.Schema({
+  , userSchema = new mongoose.Schema({
       username: String,
       password: String,
       token   : String,
@@ -11,9 +11,7 @@ var mongoose = require('mongoose')
         firstName : String,
         lastName  : String
       }]
-    },{
-      collection: 'users'
-    }),
-User = mongoose.model('user', userSchema);
+    })
+  , User = mongoose.model('User', userSchema);
 
 module.exports = User;

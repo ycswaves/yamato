@@ -11,6 +11,6 @@ var mongoose = require('mongoose')
       details : {}
     })
 
-  , Property = mongoose.model('Property', userSchema);
+  , Property = mongoose.model('Property', propertySchema);
 
 module.exports = Property;
