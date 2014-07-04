@@ -4,8 +4,8 @@ module.exports = function(app) {
  */
   app.get('/properties', function(req, res){
     res.render('properties/list',{
-			title			: 'Property List',
-			bodyClass : 'page-sub-page page-listing-lines page-search-results'
+	  title     : 'Property List',
+	  bodyClass : 'page-sub-page page-listing-lines page-search-results'
     });
   });
 }

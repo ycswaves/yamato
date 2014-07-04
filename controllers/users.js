@@ -15,8 +15,8 @@ module.exports = function(app) {
   app.get('/users/signup', function(req, res) {
     // any logic goes here
     var user = new User({ 
-        username : 'guanhao', 
-        password : 'testing' 
+      username : 'guanhao', 
+      password : 'testing' 
     }); 
     user.save(); 
     res.send('Data inited'); 
@@ -35,7 +35,7 @@ module.exports = function(app) {
  */
   app.get('/users', function(req, res) {
     User.find(function(err, doc) { 
-        res.json(doc); 
+      res.json(doc); 
     });
   });
 } 

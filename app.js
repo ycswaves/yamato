@@ -2,8 +2,8 @@
 var express = require('express')
   , http = require('http')
   , path = require('path')
-  , app  = express()
-  , fs   = require('fs');
+  , fs   = require('fs')
+  , app  = express();
 
 //Load express handlebars
 var expressHbs = require('express3-handlebars');
@@ -13,9 +13,9 @@ app.engine('html', expressHbs({
   defaultLayout:'main.html',
   helpers: {
     section: function(name, options){
-        if(!this.section) this.section = {};
-        this.section[name] = options.fn(this);
-        return null;
+      if(!this.section) this.section = {};
+      this.section[name] = options.fn(this);
+      return null;
     }
   }
 }));
@@ -32,14 +32,14 @@ app.use("/assets", express.static(path.join(__dirname + '/assets')));
 
 // dynamically include routes (Controller)
 fs.readdir('./controllers', function(err, files){
-  if(err){
+  if(err){ 
     console.log('no controllers');
     return;
   }
   files.forEach(function (file) {
     if(path.extname(file) == '.js') {
-        route = require('./controllers/' + file);
-        route(app);
+      route = require('./controllers/' + file);
+      route(app);
     }
   });
 });
