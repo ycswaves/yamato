@@ -81,7 +81,7 @@ blockquote .cite footer {
 body {
   background-color: #fff;
   color: #5a5a5a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
 }
 
 dl {
