@@ -1,204 +1,7 @@
-<style type="text/css">
-.welcome{
-    background: url('http://demo.hiarn.com/closed-city/static-countdown/img/bg@1920.jpg') no-repeat center top;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    min-height: 830px;
-    width: 100%;
-    color: #fff;
-}
-
-.slogan{
-    text-align: left;
-    width:80%;
-    max-width: 1140px;
-    margin: 0 auto;
-    padding-top:350px;
-}
-
-.slogan h1{
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    font-size: 35px;
-    font-weight: normal;
-    margin: 5px 0;
-    position: relative;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-    left: 0px;
-    border-bottom: none;
-}
-
-.slogan h2{
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-#advertising{
-    /*background-color: #ebeef5;*/
-    padding: 50px 0px 25px 0px;
-}
-
-.btn-twitter {
-  color: #fff !important;
-  background-color: #00c7f7;
-  border-color: #00c7f7;
-}
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active,
-.btn-twitter.active,
-.open .dropdown-toggle.btn-twitter {
-  color: #fff !important;
-  background-color: #00a6ce;
-  border-color: #0096ba;
-}
-.btn-twitter:active,
-.btn-twitter.active,
-.open .dropdown-toggle.btn-twitter {
-  background-image: none;
-}
-.btn-twitter.disabled,
-.btn-twitter.disabled:hover,
-.btn-twitter.disabled:focus,
-.btn-twitter.disabled:active,
-.btn-twitter.disabled.active,
-.btn-twitter[disabled],
-.btn-twitter[disabled]:hover,
-.btn-twitter[disabled]:focus,
-.btn-twitter[disabled]:active,
-.btn-twitter[disabled].active,
-fieldset[disabled] .btn-twitter,
-fieldset[disabled] .btn-twitter:hover,
-fieldset[disabled] .btn-twitter:focus,
-fieldset[disabled] .btn-twitter:active,
-fieldset[disabled] .btn-twitter.active {
-  background-color: #00c7f7;
-  border-color: #00c7f7;
-}
-
-.btn-facebook {
-  color: #fff !important;
-  background-color: #335397;
-  border-color: #335397;
-}
-.btn-facebook:hover,
-.btn-facebook:focus,
-.btn-facebook:active,
-.btn-facebook.active,
-.open .dropdown-toggle.btn-facebook {
-  color: #fff !important;
-  background-color: #294279;
-  border-color: #243a69;
-}
-.btn-facebook:active,
-.btn-facebook.active,
-.open .dropdown-toggle.btn-facebook {
-  background-image: none;
-}
-.btn-facebook.disabled,
-.btn-facebook.disabled:hover,
-.btn-facebook.disabled:focus,
-.btn-facebook.disabled:active,
-.btn-facebook.disabled.active,
-.btn-facebook[disabled],
-.btn-facebook[disabled]:hover,
-.btn-facebook[disabled]:focus,
-.btn-facebook[disabled]:active,
-.btn-facebook[disabled].active,
-fieldset[disabled] .btn-facebook,
-fieldset[disabled] .btn-facebook:hover,
-fieldset[disabled] .btn-facebook:focus,
-fieldset[disabled] .btn-facebook:active,
-fieldset[disabled] .btn-facebook.active {
-  background-color: #335397;
-  border-color: #335397;
-}
-.btn-gplus {
-  color: #fff !important;
-  background-color: #dd4a38;
-  border-color: #dd4a38;
-}
-.btn-gplus:hover,
-.btn-gplus:focus,
-.btn-gplus:active,
-.btn-gplus.active,
-.open .dropdown-toggle.btn-gplus {
-  color: #fff !important;
-  background-color: #ca3522;
-  border-color: #b8301f;
-}
-.btn-gplus:active,
-.btn-gplus.active,
-.open .dropdown-toggle.btn-gplus {
-  background-image: none;
-}
-.btn-gplus.disabled,
-.btn-gplus.disabled:hover,
-.btn-gplus.disabled:focus,
-.btn-gplus.disabled:active,
-.btn-gplus.disabled.active,
-.btn-gplus[disabled],
-.btn-gplus[disabled]:hover,
-.btn-gplus[disabled]:focus,
-.btn-gplus[disabled]:active,
-.btn-gplus[disabled].active,
-fieldset[disabled] .btn-gplus,
-fieldset[disabled] .btn-gplus:hover,
-fieldset[disabled] .btn-gplus:focus,
-fieldset[disabled] .btn-gplus:active,
-fieldset[disabled] .btn-gplus.active {
-  background-color: #dd4a38;
-  border-color: #dd4a38;
-}
-
-.btn > i.pull-left,
-.btn > i.pull-right {
-  line-height: 1.428571429;
-}
-
-.horizontal-search-float .search-box hr{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.horizontal-search-float .search-box-wrapper .search-box .advanced-search-toggle {
-    padding: 10px 0px;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.horizontal-search-float .search-box-wrapper .search-box .advanced-search h3 {
-margin-top: 0;
-}
-
-.horizontal-search-float .search-box-wrapper .search-box .nav-pills li.active a {
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    background-color: #1396e2;
-    color: #fff;
-}
-
-.horizontal-search-float .search-box-wrapper .search-box .nav-pills li a {
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
-    color: white;
-}
-
-</style>
-
 {{#section 'searchbox'}}
-<div class="slogan">
-  <h1>Find a place to stay.</h1>
-  <h2>Rent from people in over 34,000 cities and 190 countries.</h2>
+<div class="container slogan">
+  <h1>寻找属于你的那个家。</h1>
+  <h2>一站式家居体验，从这里开始 !</h2>
 </div>
 
 <div class="search-box-wrapper">
@@ -206,8 +9,10 @@ margin-top: 0;
         <div class="container">
             <div class="search-box map">
                     <ul class="nav nav-pills">
-                <li class="active"><a href="#search-form-sale" data-toggle="tab">Sale</a></li>
-                <li><a href="#search-form-rent" data-toggle="tab">Rent</a></li>
+                <li class="active"><a href="#search-form-sale" data-toggle="tab">买房</a></li>
+                <li><a href="#search-form-rent" data-toggle="tab">租房</a></li>
+                <li><a href="javascript:;" class="tool-tip" data-toggle="tooltip" data-placement="top" title="启动中">搬家</a></li>
+                <li><a href="javascript:;" class="tool-tip" data-toggle="tooltip" data-placement="top" title="启动中">家政</a></li>
                 </ul>
                 <hr>
                 <div class="tab-content">
@@ -216,32 +21,18 @@ margin-top: 0;
                     <div class="row">
                         <div class="col-md-2 col-sm-4">
                             <div class="form-group">
-                                <select name="form-sale-country">
-                                    <option value="">Country</option>
-                                    <option value="1">France</option>
-                                    <option value="2">Great Britain</option>
-                                    <option value="3">Spain</option>
-                                    <option value="4">Russia</option>
-                                    <option value="5">United States</option>
-                                </select>
-                            </div><!-- /.form-group -->
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="form-group">
-                                <select name="form-sale-city">
-                                    <option value="">City</option>
-                                    <option value="1">New York</option>
-                                    <option value="2">Los Angeles</option>
-                                    <option value="3">Chicago</option>
-                                    <option value="4">Houston</option>
-                                    <option value="5">Philadelphia</option>
+                                <select name="form-sale-property-type">
+                                    <option value="">房屋类型</option>
+                                    <option value="1">组屋</option>
+                                    <option value="2">公寓</option>
+                                    <option value="3">排屋</option>
                                 </select>
                             </div><!-- /.form-group -->
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <div class="form-group">
                                 <select name="form-sale-district">
-                                    <option value="">District</option>
+                                    <option value="">区域</option>
                                     <option value="1">Manhattan</option>
                                     <option value="2">The Bronx</option>
                                     <option value="3">Brooklyn</option>
@@ -250,53 +41,56 @@ margin-top: 0;
                                 </select>
                             </div><!-- /.form-group -->
                         </div>
+                        
                         <div class="col-md-2 col-sm-4">
                             <div class="form-group">
-                                <select name="form-sale-property-type">
-                                    <option value="">Property Type</option>
-                                    <option value="1">Apartment</option>
-                                    <option value="2">Condominium</option>
-                                    <option value="3">Cottage</option>
-                                    <option value="4">Flat</option>
-                                    <option value="5">House</option>
+                                <div class="price-range">
+                                    <input id="sale-price-range" type="text" name="price" value="200;50000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <select name="form-sale-district">
+                                    <option value="">房间数</option>
+                                    <option value="1">Studio</option>
+                                    <option value="1">1间</option>
+                                    <option value="2">2间</option>
+                                    <option value="3">3间</option>
+                                    <option value="4">4间</option>
+                                    <option value="5">多于4间</option>
                                 </select>
                             </div><!-- /.form-group -->
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <div class="form-group">
-                                <select name="form-sale-price">
-                                    <option value="">Price</option>
-                                    <option value="1">$10,000 +</option>
-                                    <option value="2">$50,000 +</option>
-                                    <option value="3">$100,000 +</option>
-                                    <option value="4">$500,000 +</option>
+                                <select name="form-sale-district">
+                                    <option value="">房屋大小</option>
+                                    <option value="1">小于50平米</option>
+                                    <option value="2">小于100平米</option>
+                                    <option value="3">小于150平米</option>
+                                    <option value="4">小于200平米</option>
+                                    <option value="5">小于300平米</option>
+                                    <option value="5">小于400平米</option>
+                                    <option value="5">大于400平米</option>
                                 </select>
-                            </div>
+                            </div><!-- /.form-group -->
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default">Search Sale</button>
+                                <button type="submit" class="btn btn-default">搜索</button>
                             </div><!-- /.form-group -->
                         </div>
                     </div>
                 </form><!-- /#form-map -->
                 </div>
                 <div class="tab-pane fade" id="search-form-rent">
-                <a class="advanced-search-toggle" data-toggle="collapse" data-parent="#accordion" href="#advanced-search-rent">Advanced Sale Search <i class="fa fa-plus"></i></a>
+                <a class="advanced-search-toggle" data-toggle="collapse" data-parent="#accordion" href="#advanced-search-rent">高级搜索条件 <i class="fa fa-plus"></i></a>
                                         <form role="form" id="form-map-sale" class="form-map form-search clearfix">
                                         <div id="advanced-search-rent" class="panel-collapse collapse">
                             <div class="advanced-search">
-                                <header><h3>Property Features</h3></header>
+                                <header><h3>家居设施</h3></header>
                                 <ul class="submit-features">
-                                    <li><div class="checkbox"><label><input type="checkbox">Air conditioning</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Bedding</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Heating</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Internet</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Microwave</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Smoking allowed</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Use of pool</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Toaster</label></div></li>
-                                    <li><div class="checkbox"><label><input type="checkbox">Coffee pot</label></div></li>
                                     <li><div class="checkbox"><label><input type="checkbox">Cable TV</label></div></li>
                                     <li><div class="checkbox"><label><input type="checkbox">Parquet</label></div></li>
                                     <li><div class="checkbox"><label><input type="checkbox">Roof terrace</label></div></li>
@@ -312,20 +106,18 @@ margin-top: 0;
                     <div class="row">
                             <div class="col-md-2 col-sm-4">
                                 <div class="form-group">
-                                    <select name="form-rent-city">
-                                        <option value="">City</option>
-                                        <option value="1">New York</option>
-                                        <option value="2">Los Angeles</option>
-                                        <option value="3">Chicago</option>
-                                        <option value="4">Houston</option>
-                                        <option value="5">Philadelphia</option>
+                                    <select name="form-rent-property-type">
+                                        <option value="">房屋类型</option>
+                                        <option value="1">组屋</option>
+                                        <option value="2">公寓</option>
+                                        <option value="3">排屋</option>
                                     </select>
                                 </div><!-- /.form-group -->
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <div class="form-group">
                                     <select name="form-rent-district">
-                                        <option value="">District</option>
+                                        <option value="">区域</option>
                                         <option value="1">Manhattan</option>
                                         <option value="2">The Bronx</option>
                                         <option value="3">Brooklyn</option>
@@ -336,35 +128,41 @@ margin-top: 0;
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <div class="form-group">
-                                    <select name="form-rent-property-type">
-                                        <option value="">Property Type</option>
-                                        <option value="1">Apartment</option>
-                                        <option value="2">Condominium</option>
-                                        <option value="3">Cottage</option>
-                                        <option value="4">Flat</option>
-                                        <option value="5">House</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="form-group">
-                                    <select name="form-rent-payment">
-                                        <option value="">Payment</option>
-                                        <option value="1">Monthly</option>
-                                        <option value="2">Quarterly</option>
-                                        <option value="3">Yearly</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="form-group">
                                     <select name="form-rent-price">
-                                        <option value="">Price</option>
+                                        <option value="">价格</option>
                                         <option value="1">$100 +</option>
                                         <option value="2">$500 +</option>
-                                        <option value="2">$1000 +</option>
+                                        <option value="3">$1,000 +</option>
+                                        <option value="3">$2,000 +</option>
+                                        <option value="3">$3,000 +</option>
+                                        <option value="3">$4,000 +</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-sale-district">
+                                        <option value="">房间数</option>
+                                        <option value="1">Studio</option>
+                                        <option value="1">单间</option>
+                                        <option value="2">2+1整套</option>
+                                        <option value="3">3+1整套</option>
+                                        <option value="4">4+1整套</option>
+                                        <option value="5">多于4+1间</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="form-group">
+                                    <select name="form-sale-district">
+                                        <option value="">房屋大小</option>
+                                        <option value="1">Manhattan</option>
+                                        <option value="2">The Bronx</option>
+                                        <option value="3">Brooklyn</option>
+                                        <option value="4">Queens</option>
+                                        <option value="5">Staten Island</option>
+                                    </select>
+                                </div><!-- /.form-group -->
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <div class="form-group">
@@ -385,21 +183,21 @@ margin-top: 0;
 <section id="banner">
     <div class="block has-dark-background background-color-default center text-banner">
         <div class="container">
-            <h1 class="no-bottom-margin no-border">Welcome to Home Beacon!</h1>
-            <h3>Finding properties never been this easier before</h3>
+            <h1 class="no-bottom-margin no-border">家易</h1>
+            <h3>搜房从未如此简单</h3>
         </div>
     </div>
 </section><!-- /#banner -->
 <section id="our-services" class="block">
     <div class="container">
-        <header class="section-title"><h2>Our Services</h2></header>
+        <header class="section-title"><h2>极简平台</h2></header>
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box equal-height">
                     <figure class="icon"><i class="fa fa-building-o"></i></figure>
                     <aside class="description">
-                        <header><h3>Wide Range of Properties</h3></header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <header><h3>丰富的房源</h3></header>
+                        <p>网罗海外华人资源，联合众多房屋经纪公司共同打造实时海量房源</p>
                     </aside>
                 </div><!-- /.feature-box -->
             </div><!-- /.col-md-4 -->
@@ -407,8 +205,8 @@ margin-top: 0;
                 <div class="feature-box equal-height">
                     <figure class="icon"><i class="fa fa-search"></i></figure>
                     <aside class="description">
-                        <header><h3>Comprehensive Searching</h3></header>
-                        <p>Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi </p>
+                        <header><h3>极致的搜索</h3></header>
+                        <p>分门别类，多样化的搜索条件让结果更为贴近实际要求，对麻烦说不</p>
                     </aside>
                 </div><!-- /.feature-box -->
             </div><!-- /.col-md-4 -->
@@ -416,8 +214,8 @@ margin-top: 0;
                 <div class="feature-box equal-height">
                     <figure class="icon"><i class="fa fa-bullhorn"></i></figure>
                     <aside class="description">
-                        <header><h3>Push Notification!</h3></header>
-                        <p>Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat</p>
+                        <header><h3>推送功能</h3></header>
+                        <p>独特的推送系统会自动将满足您设置好的条件的房源直推给您，让你最快获得第一手信息</p>
                     </aside>
                 </div><!-- /.feature-box -->
             </div><!-- /.col-md-4 -->
@@ -429,8 +227,8 @@ margin-top: 0;
         <a href="submit.html">
             <div class="banner">
                 <div class="wrapper">
-                    <span class="title">List your property for free now?</span>
-                    <span class="submit">Submit it now! <i class="fa fa-check"></i></span>
+                    <span class="title">我要免费张贴房源信息 !</span>
+                    <span class="submit">点我开始 ! <i class="fa fa-check"></i></span>
                 </div>
             </div><!-- /.banner-->
         </a>
@@ -438,7 +236,7 @@ margin-top: 0;
 </section><!-- /#adveritsing-->
 <section id="testimonials" class="block">
     <div class="container">
-        <header class="section-title"><h2>Testimonials</h2></header>
+        <header class="section-title"><h2>用户体验</h2></header>
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <blockquote class="testimonial">
@@ -450,7 +248,7 @@ margin-top: 0;
                 </blockquote>
                 <blockquote>
                 <aside class="cite">
-                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <p>Fusce risus metus, placerat in consectetur eu。</p>
                     <footer>Natalie Jenkins</footer>
                 </aside>
                 </blockquote>
@@ -465,7 +263,7 @@ margin-top: 0;
                 </blockquote>
                 <blockquote>
                 <aside class="cite">
-                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <p>Fusce risus metus, placerat in consectetur eu。</p>
                     <footer>Natalie Jenkins</footer>
                 </aside>
                 </blockquote>
@@ -480,7 +278,7 @@ margin-top: 0;
                 </blockquote>
                 <blockquote>
                 <aside class="cite">
-                    <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                    <p>Fusce risus metus, placerat in consectetur eu。</p>
                     <footer>Natalie Jenkins</footer>
                 </aside>
                 </blockquote>
@@ -490,7 +288,7 @@ margin-top: 0;
 </section><!-- /#testimonials -->
 <section id="partners" class="block">
     <div class="container">
-        <header class="section-title"><h2>Our Partners</h2></header>
+        <header class="section-title"><h2>合作伙伴</h2></header>
         <div class="logos">
             <div class="logo"><a href=""><img src="assets/img/logo-partner-01.png" alt=""></a></div>
             <div class="logo"><a href=""><img src="assets/img/logo-partner-02.png" alt=""></a></div>
@@ -507,32 +305,32 @@ margin-top: 0;
       <div class="modal-body">
           <div class="row">
             <div class="col-sm-6 b-r">
-              <h1 class="m-t-none m-b">Sign in</h1>
-              <p>Sign in to meet your friends.</p>
+              <h1 class="m-t-none m-b">登陆</h1>
+              <p>登陆并管理您的账户</p>
               <form role="form">
                 <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" class="form-control" placeholder="Enter email">
+                  <label>邮箱</label>
+                  <input type="email" class="form-control" placeholder="输入您的邮箱">
                 </div>
                 <div class="form-group">
-                  <label>Password</label>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <label>密码</label>
+                  <input type="password" class="form-control" placeholder="输入您的密码">
                 </div>
                 <div class="checkbox m-t-lg">
-                  <button type="submit" class="btn btn-sm btn-default pull-right text-uc m-t-n-xs"><strong>Log in</strong></button>
+                  <button type="submit" class="btn btn-sm btn-default pull-right text-uc m-t-n-xs"><strong>登入</strong></button>
                   <label>
-                    <input type="checkbox"> Remember me
+                    <input type="checkbox"> 记住我
                   </label>
                 </div>                
               </form>
             </div>
             <div class="col-sm-6">
-              <h1>Not a member?</h1>
-              <p>You can create an account <a href="#" data-toggle="modal" data-target="#signup-wrapper" class="text-info" >here</a></p>
-              <p>OR</p>
-              <a href="#" class="btn btn-facebook btn-block m-b-sm"><i class="fa fa-facebook pull-left"></i>Sign in with Facebook</a>
-              <a href="#" class="btn btn-twitter btn-block m-b-sm"><i class="fa fa-twitter pull-left"></i>Sign in with Twitter</a>
-              <a href="#" class="btn btn-gplus btn-block"><i class="fa fa-google-plus pull-left"></i>Sign in with Google+</a>
+              <h1>还不是会员 ?</h1>
+              <p>一分钟拥有账号，点击 <a href="#" data-toggle="modal" data-target="#signup-wrapper" class="text-info" >这里</a></p>
+              <p>或者</p>
+              <a href="#" class="btn btn-facebook btn-block m-b-sm"><i class="fa fa-facebook pull-left"></i>使用Facebook账户登陆</a>
+              <a href="#" class="btn btn-twitter btn-block m-b-sm"><i class="fa fa-twitter pull-left"></i>使用Twitter账户登陆</a>
+              <a href="#" class="btn btn-gplus btn-block"><i class="fa fa-google-plus pull-left"></i>使用Google账户登陆</a>
             </div>
           </div>          
         </div>
@@ -546,61 +344,63 @@ margin-top: 0;
       <div class="modal-body">
           <div class="row">
             <div class="col-md-12">
-                <h1>Create an Account</h1>
-                <h3>Account Type</h3>
+                <h1>新建账户</h1>
+                <h3>账户类型</h3>
                 <form role="form" id="form-create-account" method="post" action="">
                     <div class="radio" id="create-account-user">
                         <label>
-                            <input type="radio" id="account-type-user" name="account-type" required checked>Regular User
+                            <input type="radio" id="account-type-user" name="account-type" required checked>普通用户
                         </label>
                     </div>
                     <div class="radio" id="agent-switch" data-agent-state="">
                         <label>
-                            <input type="radio" id="account-type-agent" name="account-type" required>Agent
+                            <input type="radio" id="account-type-agent" name="account-type" required>房屋经纪
                         </label>
                     </div>
                     <div id="agency" class="disabled">
                         <div class="form-group">
-                            <label for="account-agency">Select your agency:</label>
+                            <label for="account-agency">选择您的经纪公司:</label>
                             <select name="account-agency" id="account-agency">
-                                <option value="">Agency</option>
-                                <option value="1">Estate+</option>
-                                <option value="2">Northfolk Eastate</option>
-                                <option value="3">Maximum Properties</option>
-                                <option value="4">Edd's Homes</option>
-                                <option value="5">Will & Scotch</option>
+                                <option value="">中介公司</option>
+                                <option value="1">DWG</option>
+                                <option value="2">ERA</option>
+                                <option value="3">OrangeTee</option>
+                                <option value="4">SLP</option>
+                                <option value="5">Huttons</option>
+                                <option value="6">PropNex</option>
+                                <option value="7">HSR</option>
                             </select>
                         </div><!-- /.form-group -->
                     </div>
                     <hr>
                     <div class="form-group">
-                        <label for="form-create-account-full-name">Full Name:</label>
+                        <label for="form-create-account-full-name">全名:</label>
                         <input type="text" class="form-control" id="form-create-account-full-name" required>
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <label for="form-create-account-email">Email:</label>
+                        <label for="form-create-account-email">邮箱:</label>
                         <input type="email" class="form-control" id="form-create-account-email" required>
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <label for="form-create-account-password">Password:</label>
+                        <label for="form-create-account-password">密码:</label>
                         <input type="password" class="form-control" id="form-create-account-password" required>
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <label for="form-create-account-confirm-password">Confirm Password:</label>
+                        <label for="form-create-account-confirm-password">重复输入密码:</label>
                         <input type="password" class="form-control" id="form-create-account-confirm-password" required>
                     </div><!-- /.form-group -->
                     <div class="checkbox pull-left">
                         <label>
-                            <input type="checkbox" id="account-type-newsletter" name="account-newsletter">Receive Newsletter
+                            <input type="checkbox" id="account-type-newsletter" name="account-newsletter">接受最新信息
                         </label>
                     </div>
                     <div class="form-group clearfix">
-                        <button type="submit" class="btn pull-right btn-default" id="account-submit">Create an Account</button>
+                        <button type="submit" class="btn pull-right btn-default" id="account-submit">新建账户</button>
                     </div><!-- /.form-group -->
                 </form>
                 <hr>
                 <div class="center">
-                    <figure class="note">By clicking the “Create an Account” button you agree with our <a href="terms-conditions.html">Terms and conditions</a></figure>
+                    <figure class="note">当您点击“新建账户”时表示已阅我们的 <a href="terms-conditions.html">条款与申明</a></figure>
                 </div>
             </div><!-- /.row -->
           </div><!-- /.container -->
@@ -608,3 +408,19 @@ margin-top: 0;
       </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function(){
+    var $salePriceSlider = $("#sale-price-range");
+    if($salePriceSlider.length > 0) {
+        $salePriceSlider.slider({
+            from: 200,
+            to: 50000,
+            step: 10,
+            round: 1,
+            format: { format: '$ ###,###', locale: 'en' },
+            dimension: '&nbsp;k'
+        });
+    }
+})
+</script>

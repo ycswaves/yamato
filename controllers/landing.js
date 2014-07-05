@@ -4,8 +4,9 @@ module.exports = function(app) {
  */
   app.get('/', function(req, res){
     res.render('landing/index',{
-      title     : 'Make life easier',
-      bodyClass : 'page-homepage navigation-fixed-top page-slider horizontal-search-float'
+      title     	: '一切与家有关',
+      bodyClass 	: 'page-homepage navigation-fixed-top page-slider horizontal-search-float',
+      sectionClass: 'welcome'
     });
   });
 
