@@ -1,8 +1,8 @@
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Account</a></li>
-        <li class="active">Profile</li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">账户</a></li>
+        <li class="active">个人简介</li>
     </ol>
 </div>
 <!-- end Breadcrumb -->
@@ -12,12 +12,12 @@
     <!-- sidebar -->
     <div class="col-md-3 col-sm-2">
         <section id="sidebar">
-            <header><h3>Account</h3></header>
+            <header><h3>账户</h3></header>
             <aside>
                 <ul class="sidebar-navigation">
-                    <li class="active radius"><a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a></li>
-                    <li><a href="my-properties.html"><i class="fa fa-home"></i><span>My Properties</span></a></li>
-                    <li><a href="bookmarked.html"><i class="fa fa-heart"></i><span>Bookmarked Properties</span></a></li>
+                    <li class="active radius"><a href="profile.html"><i class="fa fa-user"></i><span>个人简介</span></a></li>
+                    <li><a href="my-properties.html"><i class="fa fa-home"></i><span>我的房屋</span></a></li>
+                    <li><a href="bookmarked.html"><i class="fa fa-heart"></i><span>特别关注</span></a></li>
                 </ul>
             </aside>
         </section><!-- /#sidebar -->
@@ -26,29 +26,29 @@
         <!-- My Properties -->
         <div class="col-md-9 col-sm-10">
             <section id="profile">
-                <header><h1>Profile</h1></header>
+                <header><h1>个人简介</h1></header>
                 <div class="account-profile">
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
-                            <img alt="" class="image radius" src="/assets/img/agent-01.jpg">
+                            <img alt="" class="image radius" src="{{profile.profile.avatar}}">
                         </div>
                         <div class="col-md-9 col-sm-9">
                             <form role="form" id="form-account-profile" method="post" action="">
-                                <div class="checkbox switch" id="agent-switch" data-agent-state="is-agent">
+                                <div class="checkbox switch" id="agent-switch" data-agent-state="{{profile.isAgent}}">
                                     <label>
-                                        I am an agent<input type="checkbox">
+                                        我是房屋经纪<input type="checkbox">
                                     </label>
                                 </div>
                                 <section id="agency">
-                                    <h3>My Agency</h3>
+                                    <h3>我的中介机构</h3>
                                     <div class="row">
                                         <div class="col-md-4 col-sm-4">
-                                            <label for="account-agency">Select your agency:</label>
+                                            <label for="account-agency">选择您的中介机构:</label>
                                         </div>
                                         <div class="col-md-8 col-sm-8">
                                             <div class="form-group">
                                                 <select name="account-agency" id="account-agency">
-                                                    <option value="">Agency</option>
+                                                    <option value="">机构</option>
                                                     <option value="1">Estate+</option>
                                                     <option value="2">Northfolk Eastate</option>
                                                     <option value="3">Maximum Properties</option>
@@ -60,36 +60,38 @@
                                     </div>
                                 </section>
                                 <section id="contact">
-                                    <h3>Contact</h3>
+                                    <h3>联络方式</h3>
                                     <dl class="contact-fields">
-                                        <dt><label for="form-account-name">Your Name:</label></dt>
+                                        <dt><label for="form-account-name">名字:</label></dt>
                                         <dd><div class="form-group">
-                                            <input type="text" class="form-control" id="form-account-name" name="form-account-name" required value="Jeffrey Scott">
+                                            <input type="text" class="form-control" id="form-account-name" name="form-account-name" required value="{{profile.profile.fullName}}">
                                         </div><!-- /.form-group --></dd>
-                                        <dt><label for="form-account-phone">Phone:</label></dt>
+                                        <dt><label for="form-account-phone">电话:</label></dt>
                                         <dd><div class="form-group">
-                                            <input type="text" class="form-control" id="form-account-phone" name="form-account-phone" value="(123) 456 789">
+                                            <input type="text" class="form-control" id="form-account-phone" name="form-account-phone" value="{{profile.profile.phone}}">
                                         </div><!-- /.form-group --></dd>
-                                        <dt><label for="form-account-email">Email:</label></dt>
+                                        <dt><label for="form-account-email">邮箱:</label></dt>
                                         <dd><div class="form-group">
-                                            <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="jeffrey.scott@example.com">
+                                            <input type="text" class="form-control disabled" id="form-account-email" name="form-account-phone" value="{{profile.email}}">
                                         </div><!-- /.form-group --></dd>
-                                        <dt><label for="form-account-skype">Skype:</label></dt>
+                                        <dt><label for="form-account-skype">QQ:</label></dt>
                                         <dd><div class="form-group">
-                                            <input type="text" class="form-control" id="form-account-skype" name="form-account-skype" value="jeffrey.scott">
+                                            <input type="text" class="form-control" id="form-account-skype" name="form-account-skype" value="{{profile.profile.qq}}">
+                                        </div><!-- /.form-group --></dd>
+                                        <dt><label for="form-account-skype">微信:</label></dt>
+                                        <dd><div class="form-group">
+                                            <input type="text" class="form-control" id="form-account-skype" name="form-account-skype" value="{{profile.profile.wechat}}">
                                         </div><!-- /.form-group --></dd>
                                     </dl>
                                 </section>
                                 <section id="about-me">
-                                    <h3>About Me</h3>
+                                    <h3>关于我</h3>
                                     <div class="form-group">
-                                        <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
-Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
+                                        <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">{{profile.profile.about}}</textarea>
                                     </div><!-- /.form-group -->
                                 </section>
                                 <section id="social">
-                                    <h3>My Social Network</h3>
+                                    <h3>我的社交网络账户</h3>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon bg-twitter"><i class="fa fa-twitter"></i></span>
@@ -104,34 +106,34 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                     </div><!-- /.form-group -->
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <span class="input-group-addon bg-pinterest"><i class="fa fa-pinterest"></i></span>
-                                            <input type="text" class="form-control" id="account-social-pinterest" name="account-social-pinterest">
+                                            <span class="input-group-addon bg-pinterest"><i class="fa fa-google-plus"></i></span>
+                                            <input type="text" class="form-control" id="account-social-google" name="account-social-google">
                                         </div>
                                     </div><!-- /.form-group -->
                                     <div class="form-group clearfix">
-                                        <button type="submit" class="btn pull-right btn-default" id="account-submit">Save Changes</button>
+                                        <button type="submit" class="btn pull-right btn-default" id="account-submit">保存变更</button>
                                     </div><!-- /.form-group -->
                                 </section>
                             </form><!-- /#form-contact -->
                             <section id="change-password">
-                                <header><h2>Change Your Password</h2></header>
+                                <header><h2>更换密码</h2></header>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <form role="form" id="form-account-password" method="post" action="">
                                             <div class="form-group">
-                                                <label for="form-account-password-current">Current Password</label>
+                                                <label for="form-account-password-current">当前密码</label>
                                                 <input type="password" class="form-control" id="form-account-password-current" name="form-account-password-current">
                                             </div><!-- /.form-group -->
                                             <div class="form-group">
-                                                <label for="form-account-password-new">New Password</label>
+                                                <label for="form-account-password-new">新密码</label>
                                                 <input type="password" class="form-control" id="form-account-password-new" name="form-account-password-new">
                                             </div><!-- /.form-group -->
                                             <div class="form-group">
-                                                <label for="form-account-password-confirm-new">Confirm New Password</label>
+                                                <label for="form-account-password-confirm-new">重复输入新密码</label>
                                                 <input type="password" class="form-control" id="form-account-password-confirm-new" name="form-account-password-confirm-new">
                                             </div><!-- /.form-group -->
                                             <div class="form-group clearfix">
-                                                <button type="submit" class="btn btn-default" id="form-account-password-submit">Change Password</button>
+                                                <button type="submit" class="btn btn-default" id="form-account-password-submit">确认更换密码</button>
                                             </div><!-- /.form-group -->
                                         </form><!-- /#form-account-password -->
                                     </div>
