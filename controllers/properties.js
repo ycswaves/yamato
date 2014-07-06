@@ -1,3 +1,4 @@
+var formOpts = require('config/formOpts.js');
 module.exports = function(app) {
 /**
  * a property list
@@ -7,6 +8,14 @@ module.exports = function(app) {
 	    title     : 'Property List',
 	    bodyClass : 'page-sub-page page-listing-lines page-search-results',
       properties: getProperty()
+    });
+  });
+
+  app.get('/properties/add', function(req, res){
+    res.render('properties/add',{
+      title     : 'Publish Property',
+      bodyClass : 'page-sub-page page-submit',
+      district  : formOpts.getDistrict()
     });
   });
 }
