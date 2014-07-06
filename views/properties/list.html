@@ -1,15 +1,6 @@
-<script type="text/javascript">
-  $(function() {
-    $('#map-wrapper').on('shown.bs.modal', function () {
-        _latitude = 48.87; // These two lines represent the center of your map
-        _longitude = 2.29; // These two lines represent the center of your map
-        createHomepageGoogleMap(_latitude,_longitude);
-    });
-  });
-</script>
 <style type="text/css">
 .property-panel{
-  margin:25px 35px;
+  margin:10px 0px;
   border-radius: 2px;
   background-color: #fefefe;
   padding: 20px;
@@ -53,21 +44,25 @@
         </section>
         <div id="properties" class="row">
           {{#each properties}}
-          <div class="col-md-5 property-panel">
-              <a class="pull-left" href="#" style="margin-right:5px">
+          <div class="col-md-6 property-panel">
+            <a class="pull-left" href="#" style="margin-right:5px">
               <img alt="" style="width:100px" src="assets/img/properties/property-01.jpg" class="img-rounded">
             </a>
-              <h2 class="media-heading">{{title}}</h2>
-              <div class="tag price">$ {{price}}</div>
-                <dl style="margin:20px 10px">
-                  <dt><img class="label-img" src="assets/img/property-types/building.png">房产类型:</dt>
-                    <dd>{{apartmentType}}</dd>
-                  <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
-                    <dd>{{roomType}}</dd>
-                  <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
-                    <dd>{{mrt}}</dd>
-                  <dt><a href="property-detail.html" class="link-arrow">Read More</a></dt>
-                </dl>
+            <h3 class="media-heading">{{title}}</h3>
+            <div class="tag price" style="position:absolute; left:5px; top:15px">$ {{price}}</div>
+            <br>
+            <p>
+              这是一段很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的描述
+            </p>
+            <dl style="margin:20px 10px">
+              <dt><img class="label-img" src="assets/img/property-types/building.png">房屋类型:</dt>
+                <dd>{{apartmentType}}</dd>
+              <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
+                <dd>{{roomType}}</dd>
+              <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
+                <dd>{{mrt}}</dd>
+              <dt><a href="property-detail.html" class="link-arrow">Read More</a></dt>
+            </dl>
           </div>
 
           {{/each}}
@@ -170,11 +165,14 @@
   </div>
 </div>
 
-
-
-<!-- for map to use, need to load following js -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="assets/js/custom-map.js"></script>
-<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
-<script type="text/javascript" src="assets/js/infobox.js"></script>
-<script type="text/javascript" src="assets/js/markerclusterer_packed.js"></script>
+{{#section 'script'}}
+<script type="text/javascript">
+  $(function() {
+    $('#map-wrapper').on('shown.bs.modal', function () {
+        _latitude = 48.87; // These two lines represent the center of your map
+        _longitude = 2.29; // These two lines represent the center of your map
+        createHomepageGoogleMap(_latitude,_longitude);
+    });
+  });
+</script>
+{{/section}}
