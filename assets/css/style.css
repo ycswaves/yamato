@@ -1314,8 +1314,8 @@ ul.list-links li a:hover {
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-  opacity: 0.2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
   pointer-events: none;
 }
 

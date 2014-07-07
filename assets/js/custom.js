@@ -428,13 +428,13 @@ function agentState(){
     var $agentSwitch = $('#agent-switch');
     var $agency = $('#agency');
 
-    if ($agentSwitch.data('agent-state') == 'is-agent') {
+    if ($agentSwitch.data('agent-state') == true) {
         $agentSwitch.iCheck('check');
         $agency.removeClass('disabled');
         $agency.addClass('enabled');
         $agentSwitch.data('agent-state', '');
     } else {
-        $agentSwitch.data('agent-state', 'is-agent');
+        $agentSwitch.data('agent-state', true);
         $agency.removeClass('enabled');
         $agency.addClass('disabled');
     }
