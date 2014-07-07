@@ -1,4 +1,4 @@
-var formOpts = require('config/formOpts.js');
+var formOpts = require('../config/formOpts.js');
 module.exports = function(app) {
 /**
  * a property list

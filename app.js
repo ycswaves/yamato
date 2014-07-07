@@ -2,12 +2,20 @@
 var express = require('express')
   , http = require('http')
   , path = require('path')
-  , fs   = require('fs')
-  , app  = express();
+  , fs = require('fs')
+  , mongoose = require('mongoose')  // mongoose
+  , expressHbs = require('express3-handlebars') // handlebars
+  , passport = require('passport') // passport authentication
+  , flash = require('connect-flash')
+  , app = express();
 
-//Load express handlebars
-var expressHbs = require('express3-handlebars');
+var morgan = require('morgan') // log every request to the console
+  , cookieParser = require('cookie-parser') // read cookies (needed for auth)
+  , bodyParser = require('body-parser') // get information from html forms
+  , session = require('express-session'); //session handler
 
+
+//handlebars configuration
 app.engine('html', expressHbs({
   extname:'html',
   defaultLayout:'main.html',
@@ -22,13 +30,26 @@ app.engine('html', expressHbs({
 app.set('view engine', 'html');
 
 // database connection
-var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test');
+
+// pass passport for configuration
+require('./config/passport')(passport);
 
 // some environment variables
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.use("/assets", express.static(path.join(__dirname + '/assets')));
+
+// set up our express application
+app.use(morgan('dev'));
+app.use(cookieParser());
+app.use(bodyParser());
+
+// required for passport
+app.use(session({ secret: 'thisisarandomsalttoencryptpassword' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
 // dynamically include routes (Controller)
 fs.readdir('./controllers', function(err, files){
