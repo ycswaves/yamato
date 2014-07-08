@@ -5,9 +5,9 @@ var express = require('express')
   , fs = require('fs')
   , mongoose = require('mongoose')  // mongoose
   , expressHbs = require('express3-handlebars') // handlebars
-  , passport = require('passport') // passport authentication
   , flash = require('connect-flash')
-  , app = express();
+  , app = express()
+  , components = require('autoload')(app); //autoload all the components
 
 var morgan = require('morgan') // log every request to the console
   , cookieParser = require('cookie-parser') // read cookies (needed for auth)
@@ -33,7 +33,7 @@ app.set('view engine', 'html');
 mongoose.connect('mongodb://localhost/test');
 
 // pass passport for configuration
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 // some environment variables
 app.set('port', process.env.PORT || 3000);
@@ -46,10 +46,10 @@ app.use(cookieParser());
 app.use(bodyParser());
 
 // required for passport
-app.use(session({ secret: 'thisisarandomsalttoencryptpassword' })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+// app.use(session({ secret: 'thisisarandomsalttoencryptpassword' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
+// app.use(flash()); // use connect-flash for flash messages stored in session
 
 // dynamically include routes (Controller)
 fs.readdir('./controllers', function(err, files){
@@ -60,7 +60,7 @@ fs.readdir('./controllers', function(err, files){
   files.forEach(function (file) {
     if(path.extname(file) == '.js') {
       route = require('./controllers/' + file);
-      route(app);
+      route(app, components);
     }
   });
 });
