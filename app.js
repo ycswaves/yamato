@@ -30,7 +30,7 @@ app.engine('html', expressHbs({
 app.set('view engine', 'html');
 
 // database connection
-mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
 
 // pass passport for configuration
 require('./config/passport')(passport);
@@ -53,14 +53,14 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 // dynamically include routes (Controller)
 fs.readdir('./controllers', function(err, files){
-  if(err){ 
+  if(err){
     console.log('no controllers');
     return;
   }
   files.forEach(function (file) {
     if(path.extname(file) == '.js') {
       route = require('./controllers/' + file);
-      route(app);
+      route(app, passport);
     }
   });
 });
