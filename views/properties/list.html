@@ -5,7 +5,7 @@
   background-color: #fefefe;
   padding: 20px;
 }
-.label-img{
+.property .label-img{
   width: 15px;
   height: 15px;
   margin-right: 5px
@@ -42,33 +42,75 @@
                 </div>
             </figure>
         </section>
-        <div id="properties" class="row">
+        <section id="properties" class="display-lines">
           {{#each properties}}
-          <div class="col-md-6 property-panel">
-            <a class="pull-left" href="#" style="margin-right:5px">
-              <img alt="" style="width:100px" src="assets/img/properties/property-01.jpg" class="img-rounded">
-            </a>
-            <h3 class="media-heading">{{title}}</h3>
-            <div class="tag price" style="position:absolute; left:5px; top:15px">$ {{price}}</div>
-            <br>
-            <p>
-              这是一段很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的描述
-            </p>
-            <dl style="margin:20px 10px">
-              <dt><img class="label-img" src="assets/img/property-types/building.png">房屋类型:</dt>
-                <dd>{{apartmentType}}</dd>
-              <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
-                <dd>{{roomType}}</dd>
-              <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
-                <dd>{{mrt}}</dd>
-              <dt><a href="property-detail.html" class="link-arrow">Read More</a></dt>
-            </dl>
-          </div>
 
+          <div class="property" style="padding-left:0px">
+            <div class="row">
+              <div class="col-md-3">
+                <a href="property-detail.html">
+                  <img alt="" src="assets/img/properties/property-01.jpg">
+                </a>
+                <div class="tag price" style="position:absolute;top:0px">$ {{price}}</div>
+              </div>
+              <div class="col-md-5">
+                <header><a href="property-detail.html"><h3>{{title}}</h3></a></header>
+              </div >
+              <div class="col-md-4" style="border-left: 0px solid #eee; color:#aaa">
+                <dl style="margin:20px 10px">
+                  <dt>联系人:</dt>
+                    <dd>Mr. Chang</dd>
+                  <dt>手机:</dt>
+                    <dd>9123 1234</dd>
+                  <dt>Wechat</dt>
+                    <dd>604812333</dd>
+                  <dt>Email</dt>
+                    <dd>example@example.com</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4" >
+                <dl style="margin:20px 10px">
+                  <dt><img class="label-img" src="assets/img/property-types/building.png">房屋类型:</dt>
+                    <dd>{{apartmentType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
+                    <dd>{{roomType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
+                    <dd>{{mrt}}</dd>
+                </dl>
+              </div>
+
+              <div class="col-md-4" style="border-left: 2px dashed #eee;">
+                <dl style="margin:20px 10px">
+                  <dt><img class="label-img" src="assets/img/property-types/building.png">房屋类型:</dt>
+                    <dd>{{apartmentType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
+                    <dd>{{roomType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
+                    <dd>{{mrt}}</dd>
+                </dl>
+              </div>
+
+
+              <div class="col-md-4" style="border-left: 2px dashed #eee;">
+                <dl style="margin:20px 10px">
+                  <dt><img class="label-img" src="assets/img/property-types/building.png">房屋类型:</dt>
+                    <dd>{{apartmentType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/bed.png">房间:</dt>
+                    <dd>{{roomType}}</dd>
+                  <dt><img class="label-img" src="assets/img/property-types/train.png">近地铁:</dt>
+                    <dd>{{mrt}}</dd>
+                </dl>
+              </div>
+
+            </div>
+            <a href="property-detail.html" class="link-arrow">Read More</a>
+          </div><!-- /.property -->
           {{/each}}
+        </section><!-- /#properties-->
 
-
-        </div><!-- /#properties-->
         <!-- Pagination -->
           <div class="center">
             <ul class="pagination">

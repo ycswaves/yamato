@@ -7,13 +7,15 @@ var express = require('express')
   , expressHbs = require('express3-handlebars') // handlebars
   , flash = require('connect-flash')
   , app = express()
-  , components = require('autoload')(app); //autoload all the components
+  , Autoload = require('./autoload'); //autoload all the components
 
 var morgan = require('morgan') // log every request to the console
   , cookieParser = require('cookie-parser') // read cookies (needed for auth)
   , bodyParser = require('body-parser') // get information from html forms
   , session = require('express-session'); //session handler
 
+var Components = new Autoload(app);
+console.log(Components);
 
 //handlebars configuration
 app.engine('html', expressHbs({
@@ -30,7 +32,7 @@ app.engine('html', expressHbs({
 app.set('view engine', 'html');
 
 // database connection
-mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
 
 // pass passport for configuration
 // require('./config/passport')(passport);
@@ -53,7 +55,7 @@ app.use(bodyParser());
 
 // dynamically include routes (Controller)
 fs.readdir('./controllers', function(err, files){
-  if(err){ 
+  if(err){
     console.log('no controllers');
     return;
   }
