@@ -7,8 +7,8 @@ module.exports = function(app) {
   fs.readdirSync('./lib').forEach(function (file) {
     if(path.extname(file) == '.js') {
       var $FnName = path.basename(file,'.js')
-      // this.$FnName = require('./lib/' + file);
-      current.$FnName = 'ABC';
+      var Component = require('./lib/' + file);
+      current[$FnName] = new Component(app);
     }
   });
 }

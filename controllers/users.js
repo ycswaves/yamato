@@ -1,5 +1,5 @@
 var User = require('../models/user');
-module.exports = function(app) {
+module.exports = function(app, Component) {
 /**
  * user profile page
  */
