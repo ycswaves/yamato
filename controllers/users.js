@@ -1,9 +1,9 @@
 var User = require('../models/user');
-module.exports = function(app, passport) {
+module.exports = function(app) {
 /**
  * user profile page
  */
-  app.get('/users/profile', isLoggedIn, function(req, res){
+  app.get('/users/profile', function(req, res){
     res.render('users/profile',{
 			title			: 'My Profile',
 			bodyClass : 'page-sub-page page-profile page-account',
@@ -13,40 +13,9 @@ module.exports = function(app, passport) {
 /**
  * sign up action
  */
-  app.post('/users/signup', passport.authenticate('local-signup', {
-    successRedirect : '/users/profile', // redirect to the secure profile section
-    failureRedirect : '/', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-  }));
+  app.post('/users/signup', function(req, res){
 
-/**
- * login action
- */
-  app.post('/users/login', function(req, res) {
-    // any logic goes here
-    res.render('users/login')
   });
-
-/**
- * list all
- */
-  app.get('/users', function(req, res) {
-    User.find(function(err, doc) {
-      res.json(doc);
-    });
-  });
-}
-
-// route middleware to make sure a user is logged in
-function isLoggedIn(req, res, next) {
-
-  // if user is authenticated in the session, carry on
-  if (req.isAuthenticated()){
-    return next();
-  }
-
-  // if they aren't redirect them to the home page
-  res.redirect('/');
 }
 
 function getProfile(){
